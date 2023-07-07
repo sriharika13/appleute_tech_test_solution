@@ -1,0 +1,72 @@
+[
+    {
+        "id": "8003044946277627",
+        "name": "CCTV Camera",
+        "description": "Wireless IP Camera 360 degree view Rotatable, HD WIFI CCTV",
+        "price": 3000,
+        "category": "Electronic Devices"
+    },
+    {
+        "id": "6755049770799666",
+        "name": "Laptop",
+        "description": "PM Laptop Scheme Haier Laptop Y11C",
+        "price": 22000,
+        "category": "Electronic Devices"
+    },
+    {
+        "id": "6397035837586145",
+        "name": "Cricket Ball",
+        "description": "Practise ball indoor play(Synthetic) red and white best to play",
+        "price": 99,
+        "category": "Sports"
+    },
+    {
+        "id": "2751937874027104",
+        "name": "Cricket Bat",
+        "description": "Saki Black-Cobra long cricket bat",
+        "price": 1149,
+        "category": "Sports"
+    },
+    {
+        "id": "5235363709335603",
+        "name": "AirPods",
+        "description": "mTec AirPods affordable stereo Handsfree with Mic Black",
+        "price": 2000,
+        "category": "Mobile Accessories"
+    },
+    {
+        "id": "2676038169096009",
+        "name": "Headphones",
+        "description": "Sony WH-1000XM4 Wireless Noice Cancelling Headphones",
+        "price": 4700,
+        "category": "Mobile Accessories"
+    },
+    {
+        "id": "530723961699906",
+        "name": "Cofee",
+        "description": "NesCafe coffee Sachet 2gm(60 sachet ina pack)",
+        "price": 500,
+        "category": "Groceries"
+    },
+    {
+        "id": "07675395206466118",
+        "name": "Sneakers",
+        "description": "Flow-Red Classy Black Running Shoes for Men",
+        "price": 5000,
+        "category": "Fashion"
+    },
+    {
+        "id": "8169855202397656",
+        "name": "HandBag",
+        "description": "Handbag for Girls shoulder length green color",
+        "price": 1200,
+        "category": "Fashion"
+    },
+    {
+        "id": "9576718463955793",
+        "name": "Lamp",
+        "description": "beautiful white lamp",
+        "price": 555,
+        "category": "Groceries"
+    }
+]
