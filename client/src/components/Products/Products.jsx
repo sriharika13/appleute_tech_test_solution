@@ -1,37 +1,11 @@
 import './Products.css'
 import ProductItem from './ProductItem/ProductItem';
 import { useEffect, useState } from 'react';
-
-const DUMMY_MEALS = [
-  {
-    id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
-    price: 22.99,
-  },
-  {
-    id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
-    price: 16.5,
-  },
-  {
-    id: 'm3',
-    name: 'Barbecue Burger',
-    description: 'American, raw, meaty',
-    price: 12.99,
-  },
-  {
-    id: 'm4',
-    name: 'Green Bowl',
-    description: 'Healthy...and green...',
-    price: 18.99,
-  },
-];
+import { useCart } from '../../context/CartItems';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItem] = useState({});
+  // console.log(cxt.cart)
 
   useEffect(() => {
     (async () => {
@@ -42,25 +16,21 @@ export default function Products() {
         },
 
       });
-
       const data = await response.json();
       console.log("LL: Products -> data", data);
       setProducts(data);
     })()
 
   }, [])
-  const productList = products.map((product) =>
-    <ProductItem key={product.id} name={product.name} description={product.description} price={product.price} qty={cartItems[product.id] ?? 0} onAddClick={
-      () => {
-        const tempValue = cartItems[product.id] ? cartItems[product.id] + 1 : 1;
-        setCartItem({
-          ...cartItems,
-          [product.id]: tempValue
-        })
 
-      }
-    } />
-  )
+  const productList = products.map((product) => {
+    return (<ProductItem key={product.id}
+      id={product.id}
+      name={product.name}
+      description={product.description}
+      price={product.price}
+    />)
+  })
 
   return (
     <section className='products card'>
