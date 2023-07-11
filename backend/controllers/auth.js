@@ -3,9 +3,9 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/userModel');
 
-exports.register= async (req, res) => {
+exports.register = async (req, res) => {
   try {
-    req.body={username:"Sriharika", password:"dfdsSDG"}
+    req.body = { username: "Sriharika", password: "dfdsSDG" }
     const { username, password } = req.body;
     const existingUser = User.getUserByUsername(username);
 
@@ -23,8 +23,8 @@ exports.register= async (req, res) => {
   }
 }
 
-exports.login= async (req, res) => {
-    req.body={username:"Sriharika", password:"dfdsSDG"}
+exports.login = async (req, res) => {
+  req.body = { username: "Sriharika", password: "dfdsSDG" }
   const { username, password } = req.body;
   const user = User.getUserByUsername(username);
 
@@ -35,11 +35,12 @@ exports.login= async (req, res) => {
   const isPasswordValid = await bcrypt.compare(password, user.password);
 
   if (isPasswordValid) {
+    // jwt.verify
     const token = jwt.sign(
       {
         username: user.username,
-      },  
-      'secret123',{expiresIn: '1d'}
+      },
+      'secret123', { expiresIn: '1d' }
     );
 
     const responseJson = { status: 'ok', user: token, username: user.username }
