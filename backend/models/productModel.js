@@ -16,12 +16,6 @@ module.exports= class Product{
         this.category=category;
     }
 
-    // static async addUser(){
-    //     const token= await authController.login()
-    //     console.log(token)
-    //     // Users.getUserByToken()
-    // }
-
     save(){
         let products=[]
         fs.readFile(p, (err, fileContent)=>{
@@ -35,19 +29,15 @@ module.exports= class Product{
         })
     }
 
-    static fetchAll(cb){
-        fs.readFile(p, (err, fileContent)=>{
-            if(err) return cb([])
-            const productsArr= JSON.parse(fileContent)
-            cb(productsArr)
+    static fetchAll(){
+        return new Promise((resolve, reject) => {
+            fs.readFile(p, (err, fileContent)=>{
+                if(err) return reject("Something Went Wrong")
+                const productsArr= JSON.parse(fileContent)
+                resolve(productsArr)
+            })
         })
-    }
-
-    static findById(id, cb){
-        fs.readFile(p, (err, fileContent)=>{
-            const products= JSON.parse(fileContent )
-            const product= products.find(p=> p.id=== id)
-            cb(product)
-        })
+        
+       
     }
 }
