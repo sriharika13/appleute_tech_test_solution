@@ -1,0 +1,34 @@
+{
+    "8003044946277627": {
+        "qty": 1,
+        "id": "8003044946277627",
+        "name": "CCTV Camera",
+        "description": "Wireless IP Camera 360 degree view Rotatable, HD WIFI CCTV",
+        "price": 3000,
+        "category": "Electronic Devices"
+    },
+    "6755049770799666": {
+        "qty": 2,
+        "id": "6755049770799666",
+        "name": "Laptop",
+        "description": "PM Laptop Scheme Haier Laptop Y11C",
+        "price": 22000,
+        "category": "Electronic Devices"
+    },
+    "6397035837586145": {
+        "qty": 1,
+        "id": "6397035837586145",
+        "name": "Cricket Ball",
+        "description": "Practise ball indoor play(Synthetic) red and white best to play",
+        "price": 99,
+        "category": "Sports"
+    },
+    "2751937874027104": {
+        "qty": 1,
+        "id": "2751937874027104",
+        "name": "Cricket Bat",
+        "description": "Saki Black-Cobra long cricket bat",
+        "price": 1149,
+        "category": "Sports"
+    }
+}
