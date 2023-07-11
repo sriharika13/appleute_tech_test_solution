@@ -1,9 +1,9 @@
 import './ProductItem.css'
 import ProductItemForm from './ProductItemForm'
 
-export default function ProductItem(props){
+export default function ProductItem(props) {
 
-    const price=`$${props.price.toFixed(2)}`
+    const price = `$${props.price.toFixed(2)}`
     return (
         <li className='product'>
             <div>
@@ -12,7 +12,7 @@ export default function ProductItem(props){
                 <div className='price'>{price}</div>
             </div>
             <div>
-            <ProductItemForm onAddClick={props.onAddClick} qty={props.qty}/>
+                <ProductItemForm id={props.id} />
             </div>
         </li>
     )
