@@ -1,1 +1,13 @@
-{"products":[{"id":"0.8003044946277627","quantity":1},{"id":"0.8169855202397656","quantity":3}],"totalPrice":6600}
+{
+    "products": [
+        {
+            "id": "8003044946277627",
+            "quantity": 1
+        },
+        {
+            "id": "8169855202397656",
+            "quantity": 3
+        }
+    ],
+    "totalPrice": 6600
+}
