@@ -26,9 +26,8 @@ function Login(props) {
 		const data = await response.json();
 
 		if (data.user) {
-			localStorage.setItem("token", data.user);
 			alert("Login successful");
-			login({ name: data.username });
+			login({ name: data.username, token: data.user });
 			navigate('/')
 		} else {
 			alert("Please check your username and password");
