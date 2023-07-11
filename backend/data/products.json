@@ -68,5 +68,19 @@
         "description": "beautiful white lamp",
         "price": 555,
         "category": "Groceries"
+    },
+    {
+        "id": "0.7693613137469433",
+        "name": "Lamp",
+        "description": "beautiful white lamp",
+        "price": 45.55,
+        "category": "Groceries"
+    },
+    {
+        "id": "0.2029074326967779",
+        "name": "Lamp",
+        "description": "beautiful white lamp",
+        "price": 45.55,
+        "category": "Groceries"
     }
 ]
