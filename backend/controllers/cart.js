@@ -1,26 +1,14 @@
-const Cart= require('../models/cartModel')
+const Cart = require('../models/cartModel')
 const Product = require('../models/productModel')
 
-exports.getCart=(req, res)=>{
-    Cart.fetchCart((cart)=>{
-        Product.fetchAll(products=>{
-            const cartProducts=[]
-            for(product of products){
-                const cartProductData= cart.products.find(prod=> prod.id===product.id)
-                if(cartProductData){
-                    cartProducts.push({productData: product, quantity: cartProductData.quantity} )
-                }
-            }
-            res.send(cartProducts)
-        })
-    })
+exports.getCart = async (req, res) => {
+    console.log("LL: exports.getCart -> req.user.username", req.user.username)
+
+    const data = await Cart.fetchCart(req.user.username)
+    res.status(200).json(data)
 }
 
-exports.postCart=(req, res)=>{
-    const prodId= "0.8169855202397656"
-    // console.log(req.body)
-    Product.findById(prodId, product=>{
-        Cart.addProduct(prodId, product.price)
-    })
-    // redirect??
+exports.postCart = async (req, res) => {
+    const prodId = req.body.prodId;
+    res.status(200).json(await Cart.addProduct(prodId, req.user.username))
 }
