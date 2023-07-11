@@ -7,25 +7,34 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 
 import { AuthProvider } from "./context/AuthContext";
+import { useState } from "react";
+import { CartProvider } from "./context/CartItems";
 
 export default function App() {
   return (
     <div className="App">
       <Router>
         <AuthProvider>
-          <Header />
+          <CartProvider>
+            <Header />
+            <Routes>
+              <Route
+                path="/cart"
+                element={
+                  <ProtectedRoute>
+                    <Cart />
+                  </ProtectedRoute>
+
+                }
+              />
+              <Route path="/" element={<ProductsPage />} />
+            </Routes>
+          </CartProvider>
+
           <Routes>
-            <Route
-              path="/cart"
-              element={
-                <ProtectedRoute>
-                  <Cart />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/" element={<ProductsPage />} />
             <Route path="/login" element={<Login />} />
           </Routes>
+
         </AuthProvider>
       </Router>
     </div>
